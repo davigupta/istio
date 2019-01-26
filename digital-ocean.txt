@@ -1,5 +1,24 @@
 URL: https://istio.io/docs/examples/bookinfo/
 
+                          ./+o+-       ubuntu@k8s-master
+                  yyyyy- -yyyyyy+      OS: Ubuntu 18.04 bionic
+               ://+//////-yyyyyyo      Kernel: x86_64 Linux 4.15.0-43-generic
+           .++ .:/++++++/-.+sss/`      Uptime: 6d 3h 42m
+         .:++o:  /++++++++/:--:/-      Packages: 533
+        o:+o+:++.`..```.-/oo+++++/     Shell: bash 4.4.19
+       .:+o:+o/.          `+sssoo+/    CPU: Intel Xeon Gold 6140 @ 2x 2.295GHz
+  .++/+:+oo+o:`             /sssooo.   GPU:
+ /+++//+:`oo+o               /::--:.   RAM: 1146MiB / 3944MiB
+ \+/+o+++`o++o               ++////.
+  .++.o+++oo+:`             /dddhhh.
+       .+.o+oo:.          `oddhhhh+
+        \+.++o+o``-````.:ohdhhhhh+
+         `:o+++ `ohhhhhhhhyo++os:
+           .o:`.syhhhhhhh/.oo++o`
+               /osyyyyyyo++ooo+++/
+                   ````` +oo+++o\:
+                          `oo++.
+
 Step1>
    Create a account on https://cloud.digitalocean.com/login
 

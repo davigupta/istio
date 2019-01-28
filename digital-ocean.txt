@@ -19,7 +19,8 @@ URL: https://istio.io/docs/examples/bookinfo/
                    ````` +oo+++o\:
                           `oo++.
 
-Note: If you choose to public ip for node communication then you can skip Step6 and substitute public ip wherever private ip is mentioned.
+Note1: If you choose to public ip for node communication then you can skip Step6 and substitute public ip wherever private ip is mentioned.
+Note2: If your ssh connection hangs time-to-time, use ssh -o IPQoS=0 user@service.com
 
 Step1>
    Create a account on https://cloud.digitalocean.com/login

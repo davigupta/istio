@@ -42,8 +42,8 @@ Step4>
 Step5>
     Configure kubernetes master
         sudo kubeadm init --ignore-preflight-errors=all --pod-network-cidr <select subnet for internal KUBE_SUBNET> --apiserver-advertise-address <master-node ip private>
-        mkidr ~/.kube
-        cp -i /etc/kubernetes/kubelet.conf ~/.kube/config
+        mkdir ~/.kube
+        cp -i /etc/kubernetes/admin.conf ~/.kube/config
         sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Step6>
@@ -99,7 +99,7 @@ Step9>
          sudo kubeadm join --ignore-preflight-errors=all  --token <token> master_node_ip:6443
 
 Step10>
-     Check weave interface in woerker nodes
+     Check weave interface in worker nodes
 
 Step11>
      Check worker nodes in master
@@ -115,15 +115,15 @@ Step12>
      sudo kubectl label node k8s-worker2 node-role.kubernetes.io/worker=worker
 
 Step13>
-    Install istio
+    Install istio on master node
        sudo snap install helm --classic
        curl -L https://git.io/getLatestIstio | sh -
-       kubectl apply -f ~/install/kubernetes/helm/helm-service-account.yaml
+       kubectl apply -f ~/istio-1.0.5/install/kubernetes/helm/helm-service-account.yaml
        helm init --service-account tiller
        kubectl apply -f ~/istio-1.0.5/install/kubernetes/istio-demo.yaml
 
 Step14>
-    Wait for istio up and running
+    Wait for istio up and running (on master node)
 ====
 master:~$ kubectl get pod -n istio-system
 NAME                                      READY   STATUS      RESTARTS   AGE

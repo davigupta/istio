@@ -19,7 +19,7 @@ URL: https://istio.io/docs/examples/bookinfo/
                    ````` +oo+++o\:
                           `oo++.
 
-Note1: If you choose to public ip for node communication then you can skip Step6 and substitute public ip wherever private ip is mentioned.
+Note1: If you choose to public ip for node communication then you can skip Step6 and substitute public ip wherever private ip is mentioned. Also you can skip adding IPALLOC_RANGE in weave.yaml.
 Note2: If your ssh connection hangs time-to-time, use ssh -o IPQoS=0 user@service.com
 
 Step1>

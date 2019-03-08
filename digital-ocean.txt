@@ -44,9 +44,10 @@ Step4>
 
 Step5>
     Configure kubernetes master
+        /* kubeadm reset --- to clear older cluster */
         sudo kubeadm init --ignore-preflight-errors=all --pod-network-cidr <select subnet for internal KUBE_SUBNET> --apiserver-advertise-address <master-node ip private>
         mkdir ~/.kube
-        cp -i /etc/kubernetes/admin.conf ~/.kube/config
+        sudo cp -i /etc/kubernetes/admin.conf ~/.kube/config
         sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Step6>

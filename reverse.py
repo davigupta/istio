@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# 
+# Davi Gupta, Mar 2019
+#
 
 import asyncio
 import websockets

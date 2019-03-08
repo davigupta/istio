@@ -53,6 +53,7 @@ async def hello():
         for task in pending:
             task.cancel()
 
-logger = logging.getLogger('websockets.server')
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-asyncio.get_event_loop().run_until_complete(hello())
+if __name__ == "__main__":
+    logger = logging.getLogger('websockets.server')
+    logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+    asyncio.get_event_loop().run_until_complete(hello())
